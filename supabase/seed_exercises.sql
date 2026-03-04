@@ -1,0 +1,102 @@
+-- LetsWorkOut Exercise Seed Data
+-- Run AFTER schema.sql
+
+INSERT INTO public.exercises (name, muscle_groups, equipment, difficulty, instructions) VALUES
+
+-- CHEST
+('Barbell Bench Press', ARRAY['chest', 'triceps', 'shoulders'], ARRAY['barbell', 'bench'], 'intermediate',
+ 'Lie flat on bench. Grip bar slightly wider than shoulder-width. Lower bar to mid-chest with control. Press back up explosively. Keep feet flat on floor, maintain a slight arch.'),
+('Dumbbell Bench Press', ARRAY['chest', 'triceps', 'shoulders'], ARRAY['dumbbells', 'bench'], 'beginner',
+ 'Lie on bench with a dumbbell in each hand at chest level. Press dumbbells up and slightly together. Lower with control. Full range of motion.'),
+('Push-Up', ARRAY['chest', 'triceps', 'shoulders'], ARRAY['bodyweight'], 'beginner',
+ 'Start in plank position, hands slightly wider than shoulder-width. Lower your body until chest nearly touches floor. Push back up. Keep core tight throughout.'),
+('Incline Dumbbell Press', ARRAY['chest', 'triceps', 'shoulders'], ARRAY['dumbbells', 'bench'], 'intermediate',
+ 'Set bench to 30-45 degrees incline. Press dumbbells from shoulder level upward. Targets upper chest. Lower with control.'),
+('Cable Fly', ARRAY['chest'], ARRAY['cable_machine'], 'intermediate',
+ 'Set cables to chest height. Grab handles, step forward. Bring hands together in a hugging motion. Squeeze chest at the top. Return slowly.'),
+('Dips (Chest)', ARRAY['chest', 'triceps', 'shoulders'], ARRAY['dip_bars', 'bodyweight'], 'intermediate',
+ 'Grip dip bars, lean forward slightly. Lower until elbows at 90 degrees. Push back up. Leaning forward emphasizes chest over triceps.'),
+
+-- BACK
+('Pull-Up', ARRAY['back', 'biceps'], ARRAY['pull_up_bar', 'bodyweight'], 'intermediate',
+ 'Hang from bar with overhand grip wider than shoulder-width. Pull until chin clears bar. Lower with control. Full range of motion.'),
+('Barbell Row', ARRAY['back', 'biceps', 'rear_delts'], ARRAY['barbell'], 'intermediate',
+ 'Hinge at hips, back flat, bar hanging. Pull bar to lower ribcage. Squeeze shoulder blades together. Lower under control. Keep core braced.'),
+('Lat Pulldown', ARRAY['back', 'biceps'], ARRAY['cable_machine'], 'beginner',
+ 'Sit at lat pulldown machine. Grip bar wider than shoulders. Pull bar to upper chest. Lean back slightly. Control the weight on the way up.'),
+('Seated Cable Row', ARRAY['back', 'biceps', 'rear_delts'], ARRAY['cable_machine'], 'beginner',
+ 'Sit upright at cable machine. Pull handle to lower abdomen. Drive elbows back. Squeeze back muscles. Slowly extend arms back out.'),
+('Dumbbell Row', ARRAY['back', 'biceps'], ARRAY['dumbbells', 'bench'], 'beginner',
+ 'Plant one knee and hand on bench. Pull dumbbell from floor to hip level. Drive elbow up and back. Lower with control.'),
+('Deadlift', ARRAY['back', 'glutes', 'hamstrings', 'traps'], ARRAY['barbell'], 'advanced',
+ 'Stand with bar over mid-foot. Bend and grip bar. Push floor away, keeping back flat. Extend hips and knees simultaneously. Lock out at top. Lower with control.'),
+
+-- LEGS
+('Barbell Squat', ARRAY['quads', 'glutes', 'hamstrings'], ARRAY['barbell', 'squat_rack'], 'intermediate',
+ 'Bar on upper traps. Feet shoulder-width apart. Sit back and down, keeping chest up. Hit depth (thighs parallel or below). Drive through heels to stand.'),
+('Goblet Squat', ARRAY['quads', 'glutes', 'hamstrings'], ARRAY['dumbbell', 'kettlebell'], 'beginner',
+ 'Hold dumbbell/kettlebell at chest. Feet shoulder-width. Squat down, keeping chest tall. Elbows tracking inside knees. Stand back up.'),
+('Leg Press', ARRAY['quads', 'glutes', 'hamstrings'], ARRAY['leg_press_machine'], 'beginner',
+ 'Sit in machine, feet shoulder-width on platform. Push platform away until legs nearly extended. Lower with control. Do not lock knees fully.'),
+('Romanian Deadlift', ARRAY['hamstrings', 'glutes', 'back'], ARRAY['barbell', 'dumbbells'], 'intermediate',
+ 'Hold bar/dumbbells at hip level. Hinge at hips, pushing hips back, lowering weight along legs. Feel hamstring stretch. Drive hips forward to return.'),
+('Leg Curl', ARRAY['hamstrings'], ARRAY['leg_curl_machine'], 'beginner',
+ 'Lie face down on machine. Curl legs up toward glutes. Hold briefly at top. Lower slowly. Keep hips pressed into pad.'),
+('Bulgarian Split Squat', ARRAY['quads', 'glutes', 'hamstrings'], ARRAY['dumbbells', 'bench'], 'intermediate',
+ 'Rear foot elevated on bench. Lower front leg until thigh is parallel. Drive through front heel to stand. Challenging balance exercise.'),
+('Hip Thrust', ARRAY['glutes', 'hamstrings'], ARRAY['barbell', 'bench'], 'intermediate',
+ 'Upper back on bench, bar across hips. Drive hips up until body is in straight line from shoulders to knees. Squeeze glutes at top. Lower under control.'),
+('Walking Lunge', ARRAY['quads', 'glutes', 'hamstrings'], ARRAY['bodyweight', 'dumbbells'], 'beginner',
+ 'Step forward into lunge, lower back knee toward floor. Push off front foot to bring feet together. Alternate legs as you walk forward.'),
+('Calf Raise', ARRAY['calves'], ARRAY['bodyweight', 'dumbbells', 'calf_raise_machine'], 'beginner',
+ 'Stand with balls of feet on edge of step. Rise up on toes fully. Lower slowly below neutral for full stretch. Control throughout.'),
+
+-- SHOULDERS
+('Overhead Press', ARRAY['shoulders', 'triceps'], ARRAY['barbell', 'dumbbells'], 'intermediate',
+ 'Press bar/dumbbells from shoulder level overhead. Fully extend arms at top. Lower to shoulders. Keep core braced, avoid excessive lower back arch.'),
+('Lateral Raise', ARRAY['shoulders'], ARRAY['dumbbells', 'cable_machine'], 'beginner',
+ 'Hold dumbbells at sides. Raise arms out to sides until parallel with floor. Lead with elbows. Lower slowly. Avoid shrugging.'),
+('Face Pull', ARRAY['rear_delts', 'upper_back', 'rotator_cuff'], ARRAY['cable_machine'], 'beginner',
+ 'Set cable at face height with rope attachment. Pull rope toward face, flaring elbows out. External rotate at end. Great for shoulder health.'),
+('Arnold Press', ARRAY['shoulders', 'triceps'], ARRAY['dumbbells'], 'intermediate',
+ 'Start with dumbbells at chest, palms facing you. Press overhead while rotating palms to face forward. Reverse on the way down.'),
+
+-- ARMS
+('Barbell Curl', ARRAY['biceps'], ARRAY['barbell', 'ez_bar'], 'beginner',
+ 'Stand holding bar with supinated grip. Curl bar to shoulder level. Squeeze biceps at top. Lower with control. Keep elbows at sides.'),
+('Dumbbell Curl', ARRAY['biceps'], ARRAY['dumbbells'], 'beginner',
+ 'Hold dumbbells at sides. Curl alternately or together to shoulder level. Supinate wrist as you curl. Lower slowly. Keep elbows stationary.'),
+('Hammer Curl', ARRAY['biceps', 'brachialis', 'forearms'], ARRAY['dumbbells'], 'beginner',
+ 'Hold dumbbells with neutral grip (thumbs up). Curl to shoulder height. Keep grip neutral throughout. Targets brachialis and forearm.'),
+('Tricep Pushdown', ARRAY['triceps'], ARRAY['cable_machine'], 'beginner',
+ 'Set cable at top. Use bar or rope attachment. Push down until arms fully extended. Squeeze triceps. Allow forearms to rise back to 90 degrees.'),
+('Skull Crusher', ARRAY['triceps'], ARRAY['barbell', 'ez_bar', 'dumbbells', 'bench'], 'intermediate',
+ 'Lie on bench. Lower bar/dumbbells toward forehead by bending elbows. Extend to starting position. Keep upper arms vertical.'),
+('Tricep Dips', ARRAY['triceps', 'chest', 'shoulders'], ARRAY['bench', 'chair', 'bodyweight'], 'beginner',
+ 'Hands on bench behind you. Lower body by bending elbows. Push back up. Keep elbows close to body for more tricep focus.'),
+
+-- CORE
+('Plank', ARRAY['core', 'abs', 'shoulders'], ARRAY['bodyweight'], 'beginner',
+ 'Forearms on floor, body in straight line from head to heels. Hold position. Squeeze abs, glutes, and quads. Do not let hips sag or pike.'),
+('Crunch', ARRAY['abs'], ARRAY['bodyweight'], 'beginner',
+ 'Lie on back, knees bent. Curl shoulders toward knees. Hold briefly at top. Lower with control. Avoid pulling neck.'),
+('Leg Raise', ARRAY['abs', 'hip_flexors'], ARRAY['bodyweight'], 'beginner',
+ 'Lie flat on back. Keeping legs straight, raise them to 90 degrees. Lower slowly without touching floor. Control the negative.'),
+('Russian Twist', ARRAY['obliques', 'abs'], ARRAY['bodyweight', 'medicine_ball', 'plate'], 'beginner',
+ 'Sit with knees bent, feet slightly off floor. Rotate torso side to side. Hold weight for added difficulty. Slow and controlled.'),
+('Dead Bug', ARRAY['core', 'abs'], ARRAY['bodyweight'], 'beginner',
+ 'Lie on back, arms up, knees at 90 degrees. Lower opposite arm and leg while keeping back flat. Return and switch sides. Great for lower back.'),
+('Ab Wheel Rollout', ARRAY['abs', 'core', 'shoulders'], ARRAY['ab_wheel'], 'advanced',
+ 'Kneel with ab wheel. Roll forward slowly while extending body. Return using abs, not momentum. Start with short range, build up.'),
+
+-- CARDIO / FULL BODY
+('Burpee', ARRAY['full_body', 'cardio'], ARRAY['bodyweight'], 'intermediate',
+ 'From standing, drop to squat thrust, do push-up, jump feet to hands, jump up with arms overhead. High intensity full body movement.'),
+('Mountain Climbers', ARRAY['core', 'cardio', 'shoulders'], ARRAY['bodyweight'], 'beginner',
+ 'Start in push-up position. Drive knees alternately to chest in running motion. Keep hips level. Go at pace matching your goal.'),
+('Jump Rope', ARRAY['cardio', 'calves', 'shoulders'], ARRAY['jump_rope'], 'beginner',
+ 'Hold handles, swing rope over head, jump with feet together or alternating. Great low-impact cardio. Vary speed and patterns.'),
+('Box Jump', ARRAY['quads', 'glutes', 'calves', 'cardio'], ARRAY['plyometric_box'], 'intermediate',
+ 'Stand in front of box. Swing arms back, then forward as you jump landing softly on top. Step down, do not jump down. Build explosive power.'),
+('Kettlebell Swing', ARRAY['glutes', 'hamstrings', 'back', 'core'], ARRAY['kettlebell'], 'intermediate',
+ 'Hinge at hips, swing kettlebell between legs. Explosively extend hips to swing bell to shoulder height. Hinge back. Powerful hip hinge movement.');
