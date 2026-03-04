@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Zap, Dumbbell, Loader2, Plus, Trash2, GripVertical, Search, ChevronDown, ChevronUp } from 'lucide-react'
+import { Zap, Dumbbell, Loader2, Plus, Trash2, GripVertical, Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -10,7 +10,6 @@ import { Textarea } from '@/components/ui/textarea'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { cn } from '@/lib/utils'
 import type { Exercise, WorkoutSession, AIGeneratedPlan } from '@/types'
 
 const EXAMPLE_PROMPTS = [
@@ -47,7 +46,6 @@ export default function NewWorkoutPage() {
   const [manualExercises, setManualExercises] = useState<ManualExercise[]>([])
   const [exerciseSearch, setExerciseSearch] = useState('')
   const [exerciseResults, setExerciseResults] = useState<Exercise[]>([])
-  const [searchLoading, setSearchLoading] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
 
   const [saving, setSaving] = useState(false)
@@ -58,12 +56,10 @@ export default function NewWorkoutPage() {
       setExerciseResults([])
       return
     }
-    setSearchLoading(true)
     const timeout = setTimeout(async () => {
       const res = await fetch(`/api/exercises?search=${encodeURIComponent(exerciseSearch)}`)
       const data = await res.json()
       setExerciseResults(Array.isArray(data) ? data.slice(0, 8) : [])
-      setSearchLoading(false)
     }, 300)
     return () => clearTimeout(timeout)
   }, [exerciseSearch])
@@ -338,7 +334,7 @@ export default function NewWorkoutPage() {
             {/* Exercise list */}
             {manualExercises.length > 0 && (
               <div className="space-y-3">
-                {manualExercises.map((ex, i) => (
+                {manualExercises.map((ex) => (
                   <Card key={ex.tempId} className="bg-slate-800/50 border-white/10 text-white">
                     <CardContent className="p-4">
                       <div className="flex items-center gap-2 mb-3">

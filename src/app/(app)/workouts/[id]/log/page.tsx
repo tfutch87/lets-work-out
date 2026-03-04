@@ -1,17 +1,17 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useState, useEffect} from 'react'
+import { useParams} from 'next/navigation'
 import { ArrowLeft, Check, Timer, Loader2, Trophy, ChevronDown, ChevronUp, StopCircle } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { Skeleton } from '@/components/ui/skeleton'
 import { createClient } from '@/lib/supabase/client'
 import { cn } from '@/lib/utils'
-import type { WorkoutPlan, WorkoutSession, ExerciseLog, SetLog } from '@/types'
+import type { WorkoutPlan, WorkoutSession, ExerciseLog} from '@/types'
 
 interface SessionExercise {
   name: string
@@ -31,7 +31,7 @@ interface LoggedExercise extends ExerciseLog {
 
 export default function WorkoutLogPage() {
   const { id } = useParams<{ id: string }>()
-  const router = useRouter()
+  
 
   const [plan, setPlan] = useState<WorkoutPlan | null>(null)
   const [loading, setLoading] = useState(true)
