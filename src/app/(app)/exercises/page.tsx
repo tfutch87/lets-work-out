@@ -47,14 +47,7 @@ const bodyPartGradient: Record<string, string> = {
   waist: 'from-emerald-900/60 to-slate-900/60',
 }
 
-interface ExerciseExtended extends Exercise {
-  gif_url?: string | null    // start position image
-  video_url?: string | null  // contracted position image
-  body_part?: string
-  target_muscle?: string
-  secondary_muscles?: string[]
-  description?: string | null
-}
+type ExerciseExtended = Exercise
 
 /* ─── Exercise Card ─────────────────────────────────────────────────── */
 function ExerciseCard({

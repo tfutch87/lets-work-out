@@ -32,7 +32,13 @@ export interface Exercise {
   equipment: string[]
   difficulty: Difficulty
   instructions: string
-  video_url?: string
+  video_url?: string | null
+  gif_url?: string | null
+  body_part?: string
+  target_muscle?: string
+  secondary_muscles?: string[]
+  description?: string | null
+  exercise_db_id?: string | null
   created_at: string
 }
 
